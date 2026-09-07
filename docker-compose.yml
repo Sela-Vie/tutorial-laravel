@@ -1,4 +1,18 @@
 services:
+  app:
+    build: .
+    container_name: ${APP_CONTAINER_NAME}
+    ports:
+      - "${APP_PORT}:${APP_PORT}"
+    environment:
+      DB_HOST: postgres
+    volumes:
+      - .:/app
+    depends_on:
+      - postgres
+    networks:
+      - tutorial
+
   postgres:
     image: postgres:16-alpine
     container_name: ${DB_CONTAINER_NAME}

@@ -1,0 +1,6 @@
+node_modules/
+vendor/
+.git/
+autostart/
+*.log
+storage/*.key
