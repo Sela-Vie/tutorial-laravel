@@ -38,7 +38,7 @@ tmux_send_keys "yes | cp .env.example .env"
 
 tmux_send_keys "composer install"
 tmux_send_keys "php artisan key:generate"
-tmux_send_keys "php artisan install:api"
+tmux_send_keys "yes | php artisan install:api"
 
 tmux_send_keys "docker compose --project-name $SESSION_NAME up -d && sleep 20"
 
@@ -46,5 +46,5 @@ tmux_send_keys "docker compose --project-name $SESSION_NAME up -d && sleep 20"
 # tmux_send_keys "php artisan storage:link"
 # tmux_send_keys "php artisan make:command ExampleCommand"
 
-tmux_send_keys "php artisan migrate:fresh --seed"
+tmux_send_keys "yes | php artisan migrate:fresh --seed"
 tmux_send_keys "php artisan serve --port=$PORT --host=0.0.0.0"
