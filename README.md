@@ -49,3 +49,9 @@ php artisan serve --port=$PORT --host=0.0.0.0
 ```
 docker was written by hand <br>
 .env.example was edited to use postgress
+
+## NOTES
+```
+`phpunit.xml` is used during tests
+`.env` is used when running
+```
