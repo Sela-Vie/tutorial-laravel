@@ -38,7 +38,7 @@ tmux_send_keys "yes | cp .env.example .env"
 
 tmux_send_keys "composer install"
 tmux_send_keys "php artisan key:generate"
-tmux_send_keys "yes | php artisan install:api"
+tmux_send_keys "no | php artisan install:api"
 
 tmux_send_keys "docker compose --project-name $SESSION_NAME up -d && sleep 20"
 
